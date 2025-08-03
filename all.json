@@ -1,0 +1,831 @@
+[
+  {
+    "meta": {
+      "title": "How are you doing?",
+      "instructions": "Over the last 2 weeks, how often have you been bothered by the following problems?"
+    },
+    "questions": [
+      {
+        "id": "interstitial1",
+        "type": "interstitial",
+        "text": "Please take your time to answer our questions, and remember there is no right or wrong answer.\nThe first questionnaire asks about your mood. This is because when events happen in our lives, positive or negative, it's very common for them to affect the way we feel."
+      },
+      {
+        "id": "phq1",
+        "text": "Little interest or pleasure in doing things",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "phq2",
+        "text": "Feeling down, depressed, or hopeless",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "phq3",
+        "text": "Trouble falling or staying asleep, or sleeping too much",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "phq4",
+        "text": "Feeling tired or having little energy",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "phq5",
+        "text": "Poor appetite or overeating",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "phq6",
+        "text": "Feeling bad about yourself — or that you are a failure or have let yourself or your family down",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "phq7",
+        "text": "Trouble concentrating on things, such as reading the newspaper or watching television",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "phq8",
+        "text": "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving a lot more than usual",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "phq9",
+        "text": "Thoughts that you would be better off dead, or thoughts of hurting yourself",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "impact",
+        "text": "How difficult have these problems made it for you to work, take care of things, or get along with others?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not difficult at all",
+            "value": 0
+          },
+          {
+            "label": "Somewhat difficult",
+            "value": 1
+          },
+          {
+            "label": "Very difficult",
+            "value": 2
+          },
+          {
+            "label": "Extremely difficult",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "suicide_plan",
+        "text": "Have you had serious thoughts or a plan to end your life in the past month?",
+        "type": "radio",
+        "optional": true,
+        "options": [
+          {
+            "label": "No",
+            "value": 0
+          },
+          {
+            "label": "Yes",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "interstitial2",
+        "type": "interstitial",
+        "text": "You have answered that you have thoughts about ending your life. We are concerned you have been feeling this way.\n\nIf you feel you would like to talk about this with someone, you can call the Lagos Suicide Hotline - from Monday to Sunday, available 24/7 toll-free on 08058820777.\n\nTalk to a trusted family member, friend or colleague, or a spiritual reference person about how you feel.\n\nWhile such thoughts can be very intense, it is of utmost importance that you don’t act on them.\n\nPeople in similar situations experience that professional help alleviates their pain, and that there are alternatives.\n\nWe encourage you to reach out for help. Remember, you are not alone."
+      }
+    ]
+  },
+  {
+    "meta": {
+      "title": "How are you doing?",
+      "instructions": "Over the last 2 weeks, how often have you been bothered by the following problems?"
+    },
+    "questions": [
+      {
+        "id": "interstitial3",
+        "type": "interstitial",
+        "text": "Thank you very much!\nThe next questionnaire has 8 questions and asks about worries.\n\nHow much we worry can also depend on what we are experiencing in life."
+      },
+      {
+        "id": "gad1",
+        "text": "Feeling nervous, anxious, or on edge",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "gad2",
+        "text": "Not being able to stop or control worrying",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "gad3",
+        "text": "Worrying too much about different things",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "gad4",
+        "text": "Trouble relaxing",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "gad5",
+        "text": "Being so restless that it's hard to sit still",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "gad6",
+        "text": "Becoming easily annoyed or irritable",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "gad7",
+        "text": "Feeling afraid as if something awful might happen",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Not at all",
+            "value": 0
+          },
+          {
+            "label": "Several days",
+            "value": 1
+          },
+          {
+            "label": "More than half the days",
+            "value": 2
+          },
+          {
+            "label": "Nearly every day",
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "meta": {
+      "title": "Difficulties due to health conditions",
+      "instructions": "In the past 30 days, how much difficulty did you have in:"
+    },
+    "questions": [
+      {
+        "id": "interstitial4",
+        "type": "interstitial",
+        "text": "This questionnaire asks about difficulties due to health conditions.\n\nHealth conditions include diseases or illnesses, other health problems that may be short or long lasting, injuries, mental or emotional problems, and problems with alcohol or drugs.\n\nThink back over the past 30 days and answer these questions."
+      },
+      {
+        "id": "whodas1",
+        "text": "Standing for long periods such as 30 minutes?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas2",
+        "text": "Taking care of your household responsibilities?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas3",
+        "text": "Learning a new task, for example, learning how to get to a new place?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas4",
+        "text": "Joining in community activities in the same way as anyone else can?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas5",
+        "text": "Being emotionally affected by your health problems?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas6",
+        "text": "Concentrating on doing something for ten minutes?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas7",
+        "text": "Walking a long distance such as a kilometre?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas8",
+        "text": "Washing your whole body?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas9",
+        "text": "Getting dressed?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas10",
+        "text": "Dealing with people you do not know?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas11",
+        "text": "Maintaining a friendship?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas12",
+        "text": "Your day-to-day work?",
+        "type": "radio",
+        "options": [
+          {
+            "label": "None",
+            "value": 0
+          },
+          {
+            "label": "Mild",
+            "value": 1
+          },
+          {
+            "label": "Moderate",
+            "value": 2
+          },
+          {
+            "label": "Severe",
+            "value": 3
+          },
+          {
+            "label": "Extremely or cannot do",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "whodas_days_present",
+        "text": "Overall, in the past 30 days, how many days were these difficulties present?",
+        "type": "number",
+        "min": 0,
+        "max": 30
+      },
+      {
+        "id": "whodas_days_unable",
+        "text": "In the past 30 days, for how many days were you totally unable to carry out your usual activities or work because of any health condition?",
+        "type": "number",
+        "min": 0,
+        "max": 30
+      },
+      {
+        "id": "whodas_days_cutback",
+        "text": "In the past 30 days, not counting the days that you were totally unable, for how many days did you cut back or reduce your usual activities or work because of any health condition?",
+        "type": "number",
+        "min": 0,
+        "max": 30
+      }
+    ]
+  },
+  {
+    "meta": {
+      "title": "Straight from the heart",
+      "instructions": "We would like to hear from you about how you are doing right now.\n\nPlease answer in your own words.\nYou can write as much or as little as you like.\nThere's no right or wrong way to describe your experience."
+    },
+    "questions": [
+      {
+        "id": "interstitial5",
+        "text": "In the next section, we'd like you to tell us about your experiences in your own words.\n\nYour responses are completely anonymous and will be used for research purposes only.\n\nPlease only share what you're comfortable with.",
+        "type": "interstitial"
+      },
+      {
+        "id": "freeform_feelings",
+        "text": "How have you been feeling over the past two weeks?",
+        "type": "textarea"
+      },
+      {
+        "id": "freeform_challenges",
+        "text": "What challenges or changes have you noticed in your daily life, emotions, or relationships?",
+        "type": "textarea"
+      },
+      {
+        "id": "freeform_other_notes",
+        "text": "Is there anything else you'd like to share about your mental health or well-being?",
+        "type": "textarea"
+      },
+      {
+        "id": "interstitial6",
+        "text": "Thank you for answering our questions, we really appreciate the time you have taken to participate in this programme.",
+        "type": "interstitial"
+      }
+    ]
+  }
+]
