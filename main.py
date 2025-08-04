@@ -117,13 +117,19 @@ class SurveySubmission(BaseModel):
     whodas: WHODAS
     freeform: Freeform
 
+class LLMSummary(BaseModel):
+    depression: str
+    anxiety: str
+    functioning: str
+    note: str
+
 class SubmissionResponse(BaseModel):
     id: UUID4
     timestamp: datetime
     phq9_score: int
     gad7_score: int
     whodas_score: float
-    llm_summary: Dict[str, Any]
+    llm_summary: LLMSummary
 
 # --- BUSINESS LOGIC ---
 
@@ -136,19 +142,23 @@ def calculate_gad7_score(gad: GAD7) -> int:
 def calculate_whodas_score(whodas: WHODAS) -> float:
     return sum([v for k, v in whodas.dict().items() if k.startswith("whodas") and k[6].isdigit()])
 
-def call_gemini(text: str, client) -> dict:
-    prompt = (
-        "Classify the following mental health journal entry and return only a valid JSON object with keys: "
-        "'depression' (low/moderate/high/severe), 'anxiety' (low/moderate/high/severe), "
-        "'functioning' (low/moderate/high/severe), and 'note' (a brief one-line summary).\n\n"
-        f"Text:\n{text}"
-    )
+
+def call_gemini(text: str, client) -> LLMSummary:
+    prompt = f"""Classify the following mental health journal entry into structured categories.
+    Entry:
+    {text}
+    """
     try:
         response = client.models.generate_content(
             model="gemini-2.5-pro",
-            contents=prompt
+            contents=prompt,
+            config={
+                "response_mime_type": "application/json",
+                "response_schema": LLMSummary,
+            },
         )
-        return json.loads(response.text.strip())
+        return response.parsed
+
     except Exception as e:
         logger.error(f"Gemini call failed: {e}")
         raise HTTPException(
@@ -238,10 +248,10 @@ def submit_survey(
         "phq9_score": phq9_score,
         "gad7_score": gad7_score,
         "whodas_score": whodas_score,
-        "llm_depression": llm_summary.get("depression"),
-        "llm_anxiety": llm_summary.get("anxiety"),
-        "llm_functioning": llm_summary.get("functioning"),
-        "llm_note": llm_summary.get("note"),
+        "llm_depression": llm_summary.depression,
+        "llm_anxiety": llm_summary.anxiety,
+        "llm_functioning": llm_summary.functioning,
+        "llm_note": llm_summary.note,
     }
     result = supabase.table("survey_responses").insert(db_payload).execute()
     if getattr(result, 'error', None):
